@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Posspot Sale Page</title>
+    <!--    Fabicon-->
+    <link rel="shortcut icon" href="images/pos.png" type="image/x-icon" />
+    
+    <!--    My Stylsheet-->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <!--    Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/618da24f65.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md bg-light">
+ <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo2.png" alt="">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"><i class="fas fa-info-circle" style="color:#000; font-size:26px;"></i></span>
+                </button>
+
+<!-- Nav Item -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="btn-group btn-group-sm">
+                    <div type="" class="bg-info text-light rounded-left py-1 px-2"><i class="fa fa-home" aria-hidden="true"></i> Genearl POS</div>
+                    <div type="" class="bg-secondary text-light rounded-right py-1 px-2"><i class="fa fa-podcast" aria-hidden="true"></i> Primary Station</div>
+                </div>
+            </div>
+
+
+            <ul class="nav navbar-nav ml-auto" style="margin-top: 0!important;">
+                <li>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                <i class="fas fa-user"></i> &nbsp; Admin
+                            </button>
+                        <div class="dropdown-menu admin-dd-item">
+                            <a class="dropdown-item" href="#">Change Password</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+<!--Body Left------>
+                <div class="col-sm-12 col-md-8 sidebar">
+                    <div class="card side-card-bg">
+
+                        <div class="card-header">
+
+                            <div class="md-form mb-3">
+                                
+<!--
+                                <div id="search-input">
+                                    <div class="input-group col-md-12">
+                                        <input type="text" class="form-control input-md" placeholder="Search" />
+                                        <span class="input-group-btn">
+                                                <span uk-search-icon></span>
+                                        </span>
+                                    </div>
+                                </div>
+-->
+                           
+                           <label class="open-search" for="open-search">
+                               <i class="fas fa-search"></i>
+                               <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
+                               <div class="search">
+                                   <button class="button-search"><i class="fas fa-search"></i></button>
+                                   <input type="text" placeholder="Search Product...." class="input-search" />
+                               </div>
+                           </label>
+                           
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+
+                                    <form>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <select class="uk-select" id="select-country" data-live-search="true">
+                                                       <option disabled selected>Sales Person</option>
+                                                       <option>Rahat</option>
+                                                       <option>Mohiuddin</option>
+                                                       <option>Rakibul Islam</option>
+                                                       <option>Abul khair</option>
+                                                       <option>Abdul Korim</option>
+                                                   </select>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="col-md-6">
+
+                                    <form>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <select class="uk-select" id="select-country" data-live-search="true">
+                                                       <option disabled selected>Select Customer</option>
+                                                       <option>Rahat</option>
+                                                       <option>Mohiuddin</option>
+                                                       <option>Rakibul Islam</option>
+                                                       <option>Abul khair</option>
+                                                       <option>Abdul Korim</option>
+                                                   </select>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="col-md-1 pl-md-2">
+                                    <button class="btn btn-sm bg-light w-100" uk-toggle data-target="#newCustomer"><i class="fa fa-plus text-dark" aria-hidden="true"></i>
+                                       </button>
+                                </div>
+<!-- Modal for New Customer --------------------------------------------------------->
+                                <div id="newCustomer" class="uk-flex-top" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                                        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                                        <form class="uk-grid-small" uk-grid>
+
+                                            <div class="uk-width-1-2@s">
+                                                <input class="uk-input" type="text" placeholder="Membership ID">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <select class="uk-select">
+                                                       <option disabled selected>Customer Type</option>
+                                                       <option>Regular</option>
+                                                       <option>Gold</option>
+                                                       <option>Basic</option>
+                                                       <option>Family</option>
+                                                   </select>
+                                            </div>
+                                            <div class="uk-width-1-1">
+                                                <input class="uk-input" type="text" placeholder="Full Name">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <input class="uk-input" type="text" placeholder="Phone Number">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <input class="uk-input" type="text" placeholder="Email">
+                                            </div>
+                                        </form>
+                                        <p class="uk-text-right">
+                                            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                            <button class="uk-button uk-button-primary" type="button">Add</button>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body scroll">
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product</th>
+                                                    <th>Batch</th>
+                                                    <th>Stock</th>
+                                                    <th>Qty</th>
+                                                    <th>Price</th>
+                                                    <th>Dis.</th>
+                                                    <th>Vat(%)</th>
+                                                    <th>Total</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td>Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td>
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="align-middle">Shirt-420 (BS420)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="align-middle">Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">Shirt-780 (BS780)<br>Color-Blue, Size-32</td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">Shirt-780 (BS780)<br><span class="text-muted">Color-Blue, Size-32, Color-Blue, Size-32, Color-Blue, Size-32</span></td>
+
+                                                    <td class="align-middle"><input type="text" value="5735" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="5" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="345" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="34" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="7%" class="form-control"></td>
+                                                    <td class="align-middle"><input type="text" value="2343" class="form-control"></td>
+                                                    <td class="align-middle">
+                                                        <a class="delete" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                            <tfoot>
+                                                <tr style="text-transform: uppercase; position: -webkit-sticky;
+  position: sticky; bottom: 0; background: #1D71B7; color: #fff; z-index:4;">
+                                                    <th>Total: <span style="padding-right: 4px;" id="">5</span>items</th>
+
+                                                    <td></td>
+                                                    <td></td>
+                                                    <th>Qyt: <span id="">135</span></th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <th><span id="">8</span> %</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+<!--Body Right------>
+                <div class="col-sm-12 col-md-4 body-right">
+
+                    <div class="card" style="height: 90vh;">
+                        
+<!--Body item right------------------------------------------------------------------------------------->
+                        <div class="card-body body-right-div" style="padding-top:0px; position: relative;" id="bodyContent">
+
+                            <div class="cost">
+                                <h2>Sales Overview</h2>
+
+                                <table class="saleOverview">
+                                    <tbody>
+                                        <tr>
+                                            <td>Subtotal</td>
+                                            <td class="subtotal">TK. 2300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount(%)</td>
+                                            <td class="discount">10%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Customer Dis.
+                                            
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                            
+                                            </td>
+                                            <td class="discount">7%</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Paid</td>
+                                            <td class="paid">TK. 1500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Due:</td>
+                                            <td class="due">TK. 800</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Total:</strong></td>
+                                            <td class="saleTotal"><strong>TK. 2070</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            
+                            <div class="payment_option">
+
+                                    <h4>Payment Option:</h4>
+
+                            <div class="PaymentTab tabs">
+                                <ul id="myTabs" class="nav nav-pills nav-justified" role="tablist" data-tabs="tabs">
+                                    <li class="active"><a href="#CashPay" data-toggle="tab">Cash</a></li>
+                                    <li><a href="#CardPay" data-toggle="tab">Card</a></li>
+                                    <li ><a href="#MobilePay" data-toggle="tab">Mobile Banking</a></li>
+<!--                                    <li><a href="#" uk-toggle data-target="#MultiplePay">Multiple</a></li>-->
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="CashPay">
+                                        <div class="payment_opt cash_pay">
+                                            <form class="uk-grid-small" uk-grid>
+
+                                                <div class="uk-width-1-1">
+                                                    <input class="uk-input" type="text" placeholder="Enter Amount">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="CardPay">
+                                        <div class="payment_opt card_pay">
+                                            <form class="uk-grid-small" uk-grid>
+
+                                                <div class="uk-width-1-2@s">
+                                                    <input class="uk-input" type="text" placeholder="Enter Amount">
+                                                </div>
+                                                <div class="uk-width-1-2@s">
+                                                    <input class="uk-input" type="text" placeholder="Card Number">
+                                                </div>
+
+                                                <div class="uk-width-1-2@s uk-grid-margin">
+                                                    <select class="uk-select">
+                                                        <option disabled selected>Select Card</option>
+                                                        <option>Visa</option>
+                                                        <option>Master</option>
+                                                        <option>Nexus</option>
+                                                    </select>
+                                                </div>
+                                                <div class="uk-width-1-2@s uk-grid-margin">
+                                                    <select class="uk-select">
+                                                        <option disabled selected>Select Bank</option>
+                                                        <option>Islami Bank Bangladesh</option>
+                                                        <option>IFIC Bank</option>
+                                                        <option>Social Islami Bank</option>
+                                                        <option>DBBL</option>
+                                                    </select>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="MobilePay">
+                                        <form class="uk-grid-small" uk-grid>
+
+                                            <div class="uk-width-1-2@s">
+                                                <input class="uk-input" type="text" placeholder="Mobile Amount">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <select class="uk-select">
+                                                    <option disabled selected>Mobile Bank</option>
+                                                    <option>Bkash</option>
+                                                    <option>Roket</option>
+                                                    <option>Nagad</option>
+                                                </select>
+                                            </div>
+                                            <div class="uk-width-1-1">
+                                                <input class="uk-input" type="text" placeholder="Transaction No">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+							
+                            
+<!--  Multiple Payment Popup Start  -------------------------------------------------------->
+
+                                <div id="MultiplePay" class="uk-flex-top" uk-modal>
+                                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                                    <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                                    <form class="uk-grid-small" uk-grid>
+
+                                       <legend class="multiPay_legend">Cash Payment</legend>
+                                        <div class="uk-width-1-1">
+                                            <input class="uk-input" type="text" placeholder="Enter Amount">
+                                        </div>
+
+                                    </form>
+                                       <form class="uk-grid-small" uk-grid>
+                                          <legend class="multiPay_legend">Card Payment</legend>
+                                           <div class="uk-width-1-2@s">
+                                               <input class="uk-input" type="text" placeholder="Enter Amount">
+                                           </div>
+                                           <div class="uk-width-1-2@s">
+                                               <input class="uk-input" type="text" placeholder="Card Number">
+                                           </div>
+
+                                           <div class="uk-width-1-2@s">
+                                               <select class="uk-select">
+                                                   <option disabled selected>Select Card</option>
+                                                   <option>Visa</option>
+                                                   <option>Master</option>
+                                                   <option>Nexus</option>
+                                               </select>
+                                           </div>
+                                           <div class="uk-width-1-2@s">
+                                               <select class="uk-select">
+                                                   <option disabled selected>Select Bank</option>
+                                                   <option>Islami Bank Bangladesh</option>
+                                                   <option>IFIC Bank</option>
+                                                   <option>Social Islami Bank</option>
+                                                   <option>DBBL</option>
+                                               </select>
+                                           </div>
+                                       </form>
+                                       
+                                       <form class="uk-grid-small" uk-grid>
+
+                                           <legend class="multiPay_legend">Mobile Banking</legend>
+                                            <div class="uk-width-1-2@s">
+                                                <input class="uk-input" type="text" placeholder="Mobile Amount">
+                                            </div>
+                                            <div class="uk-width-1-2@s">
+                                                <select class="uk-select">
+                                                    <option disabled selected>Mobile Bank</option>
+                                                    <option>Bkash</option>
+                                                    <option>Roket</option>
+                                                    <option>Nagad</option>
+                                                </select>
+                                            </div>
+                                            <div class="uk-width-1-1">
+                                                <input class="uk-input" type="text" placeholder="Transaction No">
+                                            </div>
+
+                                        </form>
+                                       
+                                    <p class="uk-text-right">
+                                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                        <button class="uk-button uk-button-primary" type="button">Ok</button>
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            </div>
+<!--  Multiple Payment Popup End  -------------------------------------------------------->
+                            
+                            
+                            
+                            </div>
+                            
+                        <div class="card-footer responsiveCssForCp">
+                           <div class="row">
+                           <a class="saleBtn" href="#">Sale Now <i class="fas fa-arrow-right"></i></a>
+                           </div>
+                            <div class="row mt-3">
+
+                                <div class="col-md-3 mb-2 mb-md-0">
+                                    <button class="btn btn-sm btn-warning btn-block" uk-toggle data-target="#Discount" title="Discount"><i class="fas fa-percentage"></i></button>
+                                </div>
+                                <div class="col-md-3 mb-2 mb-md-0">
+                                    <button class="btn btn-sm btn-info btn-block" uk-toggle data-target="#saleRestore" title="Hold Sale"><i class="fas fa-pause-circle"></i></button>
+                                </div>
+                                <div class="col-md-3 mb-2 mb-md-0">
+                                    <button class="btn btn-sm btn-danger btn-block" title="Sale Return"><i class="fas fa-undo-alt"></i></button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-sm btn-secondary btn-block" uk-toggle data-target="#DeliveryService" title="Delivery Service"><i class="fas fa-truck"></i></button>
+                                </div>
+
+<!-- Modal for Discount --------------------------------------------------------->
+                            <div id="Discount" class="uk-flex-top" uk-modal>
+                                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                                    <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                                    <form>
+                                        <fieldset class="uk-fieldset">
+
+                                            <div class="uk-margin">
+                                                <input class="uk-input" type="text" placeholder="Discount in %">
+                                            </div>
+                                            <div class="uk-margin">
+                                                <input class="uk-input" type="text" placeholder="Discount in Taka">
+                                            </div>
+
+                                            <div class="uk-margin">
+                                                <select class="uk-select">
+                                                       <option disabled selected>Select Coupon</option>
+                                                       <option>Eid Offer</option>
+                                                       <option>Ramadan Offer</option>
+                                                   </select>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <p class="uk-text-right">
+                                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                        <button class="uk-button uk-button-primary" type="button">Ok</button>
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+<!-- Modal for Delivery service --------------------------------------------------------->
+                                <div id="DeliveryService" class="uk-flex-top" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                                        <h2 class="uk-modal-title">Add Delivery Cost</h2>
+                                        <form>
+                                            <fieldset class="uk-fieldset">
+                                                <div class="uk-margin">
+                                                    <label class=".uk-form-label" for="">Delivery Type<span style="color: red">*</span></label>
+                                                    <select class="uk-select">
+                                                       <option disabled selected>Select Type</option>
+                                                       <option>Agent</option>
+                                                       <option>Staff</option>
+                                                   </select>
+
+                                                    <table class="uk-table uk-table-striped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Address Type</th>
+                                                                <th>Division / City</th>
+                                                                <th>District / Area</th>
+                                                                <th>Stret</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Present Address</th>
+                                                                <td>Chittagong</td>
+                                                                <td>Chandpur</td>
+                                                                <td>106, Shahrasti</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Shipping Address</th>
+                                                                <td>Dhaka</td>
+                                                                <td>Dhaka</td>
+                                                                <td>105/1, Mirpur-2</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </fieldset>
+                                        </form>
+
+                                        <h1></h1>
+
+                                        <p class="uk-text-right">
+                                            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                            <button class="uk-button uk-button-primary" type="button">Ok</button>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+<!-- Modal for Sales restore --------------------------------------------------------->
+                                <div id="saleRestore" class="uk-flex-top" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                                        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                                        <table class="uk-table uk-table-justify uk-table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Invoice No</th>
+                                                    <th>Station</th>
+                                                    <th>Customer Id</th>
+                                                    <th>Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>5256482455</td>
+                                                    <td>01</td>
+                                                    <td>525456</td>
+                                                    <td>14-12-2020</td>
+                                                    <td><button class="uk-button-small uk-button-danger"><i class="fas fa-retweet"></i> Restore</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2452548635</td>
+                                                    <td>02</td>
+                                                    <td>452147</td>
+                                                    <td>14-12-2020</td>
+                                                    <td><button class="uk-button-small uk-button-danger"><i class="fas fa-retweet"></i> Restore</button></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!--    JavaScipt-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+</body>
+
+</html>

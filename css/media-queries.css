@@ -1,0 +1,44 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.body-right-div{
+        padding: 0px 18px 0px 30px;
+    }
+    .mb-sm{margin-bottom: 5px;}
+	
+    .scroll{
+        min-height: fit-content;
+    }
+  
+    .responsiveCssForCp{
+        padding-left: 32px;
+        padding-right: 23px;
+    }
+
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+}
+@media only screen and (max-width : 767px) {
+    
+    .softInfo .nav-item{
+        margin-bottom: 3px;
+    }
+    
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+.sidebar{
+    padding-right: 0px;
+}
+    .scroll{
+        padding-right: 2px;
+    }
+}
